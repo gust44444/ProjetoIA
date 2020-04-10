@@ -40,16 +40,19 @@ public class MainController implements Initializable {
     	String col1 = String.valueOf(1);
     	String col2 = String.valueOf(2);
     	String col3 = String.valueOf(3);
-    	Linha linha1 = new Linha(col1, col2, col3);
+    	Linha linha1Or = new Linha(col1, col2, col3);
+    	Linha linha1Mod = new Linha(col1, col2, col3);
     	col1 = String.valueOf(4);
     	col2 = String.valueOf(5);
     	col3 = String.valueOf(6);
-    	Linha linha2 = new Linha(col1, col2, col3);
+    	Linha linha2Or = new Linha(col1, col2, col3);
+    	Linha linha2Mod = new Linha(col1, col2, col3);
     	col1 = String.valueOf(7);
     	col2 = String.valueOf(8);
-    	Linha linha3 = new Linha(col1, col2, null);
-    	tblOr.getItems().addAll(linha1, linha2, linha3);
-    	tblMod.getItems().addAll(linha1, linha2, linha3);
+    	Linha linha3Or = new Linha(col1, col2, null);
+    	Linha linha3Mod = new Linha(col1, col2, null);
+    	tblOr.getItems().addAll(linha1Or, linha2Or, linha3Or);
+    	tblMod.getItems().addAll(linha1Mod, linha2Mod, linha3Mod);
     }
 	
 	public void inicializaTbl() {
