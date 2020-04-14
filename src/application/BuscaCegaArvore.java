@@ -69,9 +69,9 @@ public class BuscaCegaArvore {
                         filaSucessores.enfilera(child);
 
                     }
-                    //we add the queue that contains the successors of the visted node to the beginning of the main queue
+                    
                     filaPrincipal.addQueue(filaSucessores);
-                    //successors queue should be cleared in order to store the next expaneded's successors
+                    
                     filaSucessores.clear(); //Chama metodo que limpa fila
                 }
             }
