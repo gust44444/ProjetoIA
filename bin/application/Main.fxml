@@ -6,122 +6,78 @@
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.ToggleGroup?>
-<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="583.0" prefWidth="844.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
-   <children>
-      <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <center>
-            <HBox prefHeight="200.0" prefWidth="844.0" BorderPane.alignment="CENTER">
-               <children>
-                  <HBox prefHeight="460.0" prefWidth="539.0">
-                     <children>
-                        <TableView fx:id="tblOr" prefHeight="421.0" prefWidth="354.0" stylesheets="@application.css">
-                           <columns>
-                              <TableColumn fx:id="col_1Or" maxWidth="1.7976931348623157E308" minWidth="59.0" prefWidth="110.0" />
-                              <TableColumn fx:id="col_2Or" maxWidth="1.7976931348623157E308" minWidth="30.0" prefWidth="135.0" />
-                              <TableColumn fx:id="col_3Or" maxWidth="211.0" minWidth="96.0" prefWidth="108.0" />
-                           </columns>
-                        </TableView>
-                     </children>
-                  </HBox>
-                  <HBox prefHeight="457.0" prefWidth="388.0">
-                     <children>
-                        <TableView fx:id="tblMod" prefHeight="460.0" prefWidth="328.0">
-                          <columns>
-                            <TableColumn fx:id="col_1Mod" maxWidth="1.7976931348623157E308" minWidth="0.0" prefWidth="107.0" />
-                            <TableColumn fx:id="col_2Mod" maxWidth="1.7976931348623157E308" minWidth="0.0" prefWidth="110.0" />
-                              <TableColumn fx:id="col_3Mod" maxWidth="125.0" minWidth="0.0" prefWidth="110.0" />
-                          </columns>
-                        </TableView>
-                     </children>
-                  </HBox>
-               </children>
-            </HBox>
-         </center>
-         <top>
-            <HBox prefHeight="45.0" prefWidth="712.0" BorderPane.alignment="CENTER">
-               <children>
-                  <HBox prefHeight="45.0" prefWidth="646.0">
-                     <children>
-                        <Label text="Original">
-                           <font>
-                              <Font size="15.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets left="100.0" top="10.0" />
-                           </HBox.margin>
-                        </Label>
-                     </children>
-                  </HBox>
-                  <HBox layoutX="10.0" layoutY="10.0" prefHeight="45.0" prefWidth="383.0">
-                     <children>
-                        <Label prefHeight="21.0" prefWidth="101.0" text="Modificado">
-                           <font>
-                              <Font size="15.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets top="10.0" />
-                           </HBox.margin>
-                        </Label>
-                     </children>
-                  </HBox>
-               </children>
-            </HBox>
-         </top>
-         <bottom>
-            <HBox prefHeight="187.0" prefWidth="844.0" BorderPane.alignment="CENTER">
-               <children>
-                  <VBox prefHeight="94.0" prefWidth="212.0">
-                     <children>
-                        <HBox layoutX="10.0" layoutY="10.0" prefHeight="37.0" prefWidth="212.0">
-                           <children>
-                              <RadioButton mnemonicParsing="false" text="Busca Cega">
-                                 <HBox.margin>
-                                    <Insets top="20.0" />
-                                 </HBox.margin>
-                                 <toggleGroup>
-                                    <ToggleGroup fx:id="algoritmos" />
-                                 </toggleGroup>
-                              </RadioButton>
-                           </children>
-                        </HBox>
-                        <HBox layoutX="10.0" layoutY="10.0" prefHeight="35.0" prefWidth="212.0">
-                           <children>
-                              <RadioButton mnemonicParsing="false" text="Busca Gulosa" toggleGroup="$algoritmos">
-                                 <HBox.margin>
-                                    <Insets top="10.0" />
-                                 </HBox.margin>
-                              </RadioButton>
-                           </children>
-                        </HBox>
-                        <HBox prefHeight="33.0" prefWidth="212.0">
-                           <children>
-                              <RadioButton mnemonicParsing="false" text="A*" toggleGroup="$algoritmos">
-                                 <HBox.margin>
-                                    <Insets />
-                                 </HBox.margin>
-                              </RadioButton>
-                           </children>
-                        </HBox>
-                        <HBox prefHeight="46.0" prefWidth="212.0">
-                           <children>
-                              <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="212.0" text="Executar algoritmo" />
-                           </children>
-                        </HBox>
-                     </children>
-                     <HBox.margin>
-                        <Insets left="320.0" />
-                     </HBox.margin>
-                  </VBox>
-               </children>
-            </HBox>
-         </bottom>
-      </BorderPane>
-   </children>
-</AnchorPane>
+<BorderPane prefHeight="838.0" prefWidth="788.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <center>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tblOr" prefHeight="412.0" prefWidth="343.0" translateX="10.0">
+              <columns>
+                <TableColumn fx:id="col_1Or" prefWidth="113.0" />
+                <TableColumn fx:id="col_2Or" minWidth="0.0" prefWidth="125.0" />
+                  <TableColumn fx:id="col_3Or" prefWidth="104.0" />
+              </columns>
+            </TableView>
+            <TableView fx:id="tblMod" prefHeight="412.0" prefWidth="347.0" translateX="90.0">
+              <columns>
+                  <TableColumn fx:id="col_1Mod" prefWidth="112.0" />
+                <TableColumn fx:id="col_2Mod" prefWidth="124.0" />
+                  <TableColumn fx:id="col_3Mod" prefWidth="110.0" />
+              </columns>
+            </TableView>
+         </children>
+      </HBox>
+   </center>
+   <top>
+      <HBox prefHeight="61.0" prefWidth="788.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Estado Inicial" translateX="40.0">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+            </Label>
+            <Label layoutX="241.0" layoutY="10.0" text="Estado Final" translateX="250.0">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <VBox alignment="CENTER" prefHeight="523.0" prefWidth="788.0" BorderPane.alignment="CENTER">
+         <children>
+            <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="91.0" selected="true" text="Busca Cega">
+               <padding>
+                  <Insets bottom="5.0" top="10.0" />
+               </padding>
+               <toggleGroup>
+                  <ToggleGroup fx:id="algoritmos" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" text="Busca Gulosa" toggleGroup="$algoritmos">
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="90.0" text="Busca A*" toggleGroup="$algoritmos">
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </RadioButton>
+            <Button mnemonicParsing="false" onAction="#buscaCegaIterativa" prefHeight="25.0" prefWidth="200.0" text="Executar algoritmo">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <TextArea fx:id="txtSaida" prefHeight="471.0" prefWidth="788.0" />
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>
