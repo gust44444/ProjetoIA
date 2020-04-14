@@ -105,17 +105,17 @@ public class MainController implements Initializable {
 	public void buscaCegaIterativa() {
 		long startTime = System.currentTimeMillis(); //Pega hora inicial
     	
-    	String original = col_1Or.getCellData(0)+
-    					  col_2Or.getCellData(0)+
-    					  col_3Or.getCellData(0)+
+    	String original = 	col_1Or.getCellData(0)+
+    					  	col_2Or.getCellData(0)+
+    					  	col_3Or.getCellData(0)+
     					  
-    					  col_1Or.getCellData(1)+
-						  col_2Or.getCellData(1)+
-    	                  col_3Or.getCellData(1)+
+    					  	col_1Or.getCellData(1)+
+    					  	col_2Or.getCellData(1)+
+    					  	col_3Or.getCellData(1)+
     					  
-    					  col_1Or.getCellData(2)+
-						  col_2Or.getCellData(2)+
-				          col_3Or.getCellData(2);
+    					  	col_1Or.getCellData(2)+
+						  	col_2Or.getCellData(2)+
+						  	col_3Or.getCellData(2);
     	
     	
     	String modificado = col_1Mod.getCellData(0)+
@@ -129,8 +129,6 @@ public class MainController implements Initializable {
     						col_1Mod.getCellData(2)+
     						col_2Mod.getCellData(2)+
     						col_3Mod.getCellData(2);
-    	
-    	
     	
     	System.out.println(original);
     	System.out.println(modificado);
@@ -146,19 +144,5 @@ public class MainController implements Initializable {
         txt += ("=====================================================================");
         
         txtSaida.setText(txt);
-    	
-		
 	}
-	
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }

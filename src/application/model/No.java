@@ -10,15 +10,11 @@ public class No {
     private int Profundidade;
 
    
-
-
-    // Constructor
     public No(String estado) {
         this.Estado = estado;
         Atual = new ArrayList<No>();
     }
 
-    // Properties
     public String getEstado() {
         return Estado;
     }
@@ -27,14 +23,10 @@ public class No {
         return Atual;
     }
 
-    // Public interface
     public void addAtual(No atual) {
     	Atual.add(atual);
     }
     
-    
-    
-    // Getters e setters
     public int getProfundidade() {
         return Profundidade;
     }
